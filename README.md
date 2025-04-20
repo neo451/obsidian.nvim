@@ -28,13 +28,13 @@ If you're new to Obsidian we highly recommend watching [this excellent YouTube v
 
 _Keep in mind this plugin is not meant to replace Obsidian, but to complement it._ The Obsidian app is very powerful in its own way; it comes with a mobile app and has a lot of functionality that's not feasible to implement in Neovim, such as the graph explorer view. That said, this plugin stands on its own as well. You don't necessarily need to use it alongside the Obsidian app.
 
-## About the fork
+## 🍴 About the fork
 
 The original project has not been actively maintained for quite a while and with the ever-changing Neovim ecosystem, new widely used tools such as [blink.cmp](https://github.com/Saghen/blink.cmp) or [snacks.picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) were not supported.
 With bugs, issues and pull requests piling up, people from the community decided to fork and maintain the project.
 The fork aims to stay close to the original, but fix bugs, include and merge useful improvements, and ensure long term robustness.
 
-## Table of contents
+## 📎 Table of contents
 
 - 👉 [Features](#features)
   - [Commands](#commands)
@@ -47,7 +47,7 @@ The fork aims to stay close to the original, but fix bugs, include and merge use
   - [Documentation](#documentation)
 - ➕ [Contributing](#contributing)
 
-## Features
+## ⭐ Features
 
 ▶️ **Completion:** Ultra-fast, asynchronous autocompletion for note references and tags via [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) or [blink.cmp](https://github.com/Saghen/blink.cmp) (triggered by typing `[[` for wiki links, `[` for markdown links, or `#` for tags), powered by [`ripgrep`](https://github.com/BurntSushi/ripgrep).
 
@@ -117,7 +117,7 @@ The fork aims to stay close to the original, but fix bugs, include and merge use
 
 [![2024-01-31 14 22 52](https://github.com/epwalsh/obsidian.nvim/assets/8812459/2986e1d2-13e8-40e2-9c9e-75691a3b662e)](https://github.com/epwalsh/obsidian.nvim/assets/8812459/2986e1d2-13e8-40e2-9c9e-75691a3b662e)
 
-## Setup
+## 📥 Setup
 
 ### System requirements
 
@@ -162,13 +162,17 @@ See [syntax highlighting](https://github.com/obsidian-nvim/obsidian.nvim/wiki/No
 
 If you choose to use any of these you should include them in the "dependencies" or "requires" field of the obsidian.nvim plugin spec for your package manager.
 
-### Install and configure
+### Install
 
 To configure obsidian.nvim you need to call `require("obsidian").setup({ ... })` with the desired options.
 Also see [plugin dependencies](#plugin-dependencies) and [configuration options](#configuration-options).
 
 > [!WARNING]
-> If you install from the latest release (recommended for stability) instead of `main`, be aware that the README on `main` may reference features that haven't been released yet. For that reason I recommend viewing the README on the tag for the [latest release](https://github.com/obsidian-nvim/obsidian.nvim/releases) instead of `main`.
+> If you install from the latest release (recommended for stability) instead of `main`.
+>
+> Be aware that the README on `main` may reference features that haven't been released yet.
+>
+> It is recommended to view the README on the tag for the [latest release](https://github.com/obsidian-nvim/obsidian.nvim/releases) instead of `main`.
 
 > [!TIP]
 > To see your installation status, run `:checkhealth obsidian`
@@ -265,7 +269,7 @@ use {
 
 </details>
 
-### Configuration
+## ⚙️ Configuration
 
 This is a complete list of all the options that can be passed to `require("obsidian").setup()`. The settings below are _not necessarily the defaults, but represent reasonable default settings_. Please read each option carefully and customize it to your needs.
 
@@ -603,14 +607,14 @@ require("obsidian").setup {
 
 </details>
 
-## Documentation
+## 📖 Documentation
 
 See the [obsidian.nvim wiki](https://github.com/obsidian-nvim/obsidian.nvim/wiki)
 
-## Contributing
+## 💪 Contributing
 
 Please read the [CONTRIBUTING](https://github.com/obsidian-nvim/obsidian.nvim/blob/main/CONTRIBUTING.md) guide before submitting a pull request.
 
-## Acknowledgement
+## ❤️ Acknowledgement
 
-We would like to thank [epwalsh](https://github.com/epwalsh) for creating this beautiful plugin. If you're feeling especially generous, [he still appreciates some coffee funds! ❤️](https://www.buymeacoffee.com/epwalsh).
+We would like to thank [epwalsh](https://github.com/epwalsh) for creating this beautiful plugin. If you're feeling especially generous, [he still appreciates some coffee funds!](https://www.buymeacoffee.com/epwalsh).
