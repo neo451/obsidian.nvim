@@ -103,7 +103,7 @@ The fork aims to stay close to the original, but fix bugs, include and merge use
 
 - `:ObsidianToggleCheckbox` to cycle through checkbox options.
 
-- `:ObsidianTemplate [NAME]` to insert a template from the templates folder. See ["using templates"](#using-templates).
+- `:ObsidianTemplate [NAME]` to insert a template from the templates folder. See [using templates](https://github.com/obsidian-nvim/obsidian.nvim/wiki/Using-templates).
 
 - `:ObsidianToday [OFFSET]` to open/create a new daily note. This command also takes an optional offset in days, e.g. use `:ObsidianToday -1` to go to yesterday's note. Unlike `:ObsidianYesterday` and `:ObsidianTomorrow` this command does not differentiate between weekdays and weekends.
 
@@ -121,17 +121,46 @@ The fork aims to stay close to the original, but fix bugs, include and merge use
 
 ### System requirements
 
-- NeoVim >= 0.10.0
-- If you want completion and search features (recommended) you'll need [ripgrep](https://github.com/BurntSushi/ripgrep) to be installed and on your `$PATH`.
-  See [ripgrep#installation](https://github.com/BurntSushi/ripgrep) for install options.
+- Neovim >= 0.10.0
+- For completion and search features, you'll need
 
-Specific operating systems also require additional dependencies in order to use all of obsidian.nvim's functionality:
+  - Backend: [ripgrep](https://github.com/BurntSushi/ripgrep), see [ripgrep#installation](https://github.com/BurntSushi/ripgrep) for instructions
+  - Frontend: a picker, see [Plugin dependencies](#plugin-dependencies) for choices
 
-- **Windows WSL** users need [`wsl-open`](https://gitlab.com/4U6U57/wsl-open) for the `:ObsidianOpen` command.
-- **MacOS** users need [`pngpaste`](https://github.com/jcsalterego/pngpaste) (`brew install pngpaste`) for the `:ObsidianPasteImg` command.
-- **Linux** users need xclip (X11) or wl-clipboard (Wayland) for the `:ObsidianPasteImg` command.
+- Additional system dependencies:
 
-Search functionality (e.g. via the `:ObsidianSearch` and `:ObsidianQuickSwitch` commands) also requires a picker such [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) (see [plugin dependencies](#plugin-dependencies) below).
+  - **Windows WSL** need [`wsl-open`](https://gitlab.com/4U6U57/wsl-open) for `:ObsidianOpen`
+  - **MacOS** need [`pngpaste`](https://github.com/jcsalterego/pngpaste) for `:ObsidianPasteImg`
+  - **Linux** need `xclip` (X11) or `wl-clipboard` (Wayland) for `:ObsidianPasteImg`
+
+### Plugin dependencies
+
+The only **required** plugin dependency is [plenary.nvim](https://github.com/nvim-lua/plenary.nvim), but there are a number of optional dependencies that enhance the obsidian.nvim experience.
+
+**Completion:**
+
+- **[recommended]** [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [blink.cmp](https://github.com/Saghen/blink.cmp) (new)
+
+**Pickers:**
+
+- **[recommended]** [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [ibhagwan/fzf-lua](https://github.com/ibhagwan/fzf-lua)
+- [Mini.Pick](https://github.com/echasnovski/mini.pick) from the mini.nvim library
+- [Snacks.Picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) from the snacks.nvim library
+
+**Syntax highlighting:**
+
+See [syntax highlighting](https://github.com/obsidian-nvim/obsidian.nvim/wiki/Notes-on-configuration#syntax-highlighting) for more details.
+
+- For base syntax highlighting:
+  - **[recommended]** [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+  - [preservim/vim-markdown](https://github.com/preservim/vim-markdown)
+- For additional syntax features:
+  - [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+  - [markview.nvim](https://github.com/OXY2DEV/markview.nvim)
+
+If you choose to use any of these you should include them in the "dependencies" or "requires" field of the obsidian.nvim plugin spec for your package manager.
 
 ### Install and configure
 
@@ -235,35 +264,6 @@ use {
 ```
 
 </details>
-
-### Plugin dependencies
-
-The only **required** plugin dependency is [plenary.nvim](https://github.com/nvim-lua/plenary.nvim), but there are a number of optional dependencies that enhance the obsidian.nvim experience.
-
-**Completion:**
-
-- **[recommended]** [hrsh7th/nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-- [blink.cmp](https://github.com/Saghen/blink.cmp) (new)
-
-**Pickers:**
-
-- **[recommended]** [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- [ibhagwan/fzf-lua](https://github.com/ibhagwan/fzf-lua)
-- [Mini.Pick](https://github.com/echasnovski/mini.pick) from the mini.nvim library
-- [Snacks.Picker](https://github.com/folke/snacks.nvim/blob/main/docs/picker.md) from the snacks.nvim library
-
-**Syntax highlighting:**
-
-See [syntax highlighting](#syntax-highlighting) for more details.
-
-- For base syntax highlighting:
-  - **[recommended]** [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
-  - [preservim/vim-markdown](https://github.com/preservim/vim-markdown)
-- For additional syntax features:
-  - [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
-  - [markview.nvim](https://github.com/OXY2DEV/markview.nvim)
-
-If you choose to use any of these you should include them in the "dependencies" or "requires" field of the obsidian.nvim plugin spec for your package manager.
 
 ### Configuration options
 
