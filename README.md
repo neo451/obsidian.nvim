@@ -36,16 +36,18 @@ The fork aims to stay close to the original, but fix bugs, include and merge use
 
 ## 📎 Table of contents
 
-- 👉 [Features](#features)
+- [🍴 About the fork](#🍴-about-the-fork)
+- [⭐ Features](#⭐-features)
   - [Commands](#commands)
   - [Demo](#demo)
-- ⚙️ [Setup](#setup)
+- [📝 Requirements](#📝-requirements)
   - [System requirements](#system-requirements)
   - [Plugin dependencies](#plugin-dependencies)
-  - [Install](#install)
-  - [Configuration](#configuration)
-  - [Documentation](#documentation)
-- ➕ [Contributing](#contributing)
+- [📥 Installation](#📥-installation)
+- [⚙️ Configuration](#️⚙️-configuration)
+- [📖 Documentation](#📖-documentation)
+- [💪 Contributing](#💪-contributing)
+- [❤️ Acknowledgement](#️❤️-acknowledgement)
 
 ## ⭐ Features
 
@@ -117,7 +119,7 @@ The fork aims to stay close to the original, but fix bugs, include and merge use
 
 [![2024-01-31 14 22 52](https://github.com/epwalsh/obsidian.nvim/assets/8812459/2986e1d2-13e8-40e2-9c9e-75691a3b662e)](https://github.com/epwalsh/obsidian.nvim/assets/8812459/2986e1d2-13e8-40e2-9c9e-75691a3b662e)
 
-## 📥 Setup
+## 📝 Requirements
 
 ### System requirements
 
@@ -162,7 +164,7 @@ See [syntax highlighting](https://github.com/obsidian-nvim/obsidian.nvim/wiki/No
 
 If you choose to use any of these you should include them in the "dependencies" or "requires" field of the obsidian.nvim plugin spec for your package manager.
 
-### Install
+## 📥 Installation
 
 To configure obsidian.nvim you need to call `require("obsidian").setup({ ... })` with the desired options.
 Also see [plugin dependencies](#plugin-dependencies) and [configuration options](#configuration-options).
