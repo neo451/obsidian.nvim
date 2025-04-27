@@ -19,6 +19,7 @@ local cmds = {
   "quick_switch",
   "rename",
   "search",
+  "map",
   "tags",
   "template",
   "toc",
@@ -246,5 +247,7 @@ M.register("extract_note", { nargs = "?", range = true })
 M.register("debug", { nargs = 0 })
 
 M.register("toc", { nargs = 0 })
+
+M.register("map", { nargs = 0 })
 
 return M
